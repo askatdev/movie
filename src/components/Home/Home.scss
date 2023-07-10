@@ -1,0 +1,48 @@
+#home{
+  background:url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/VlHt27nCqOuTnuX6bku8QZapzO.jpg") no-repeat center/cover;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 55vh;
+  padding: 60px 0;
+  .container{
+    .home{
+h1{
+  color: #ffff;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+      h2{
+        color: #ffff;
+        font-size: 2em;
+        font-weight: 700;
+        margin: 20px 0 70px 0;
+      }
+      &--btn{
+        position: relative;
+        input{
+          font-size: 15px;
+          padding-left: 20px;
+          width: 90%;
+          height: 50px;
+          border-radius: 25px;
+          outline: none;
+          border: none;
+        }
+        button{
+          position: absolute;
+          font-size: 20px;
+          top: 0;
+          right: 88px;
+          width: 140px;
+          height: 50px;
+          border-radius: 30px;
+          background: #92f1d1;
+          border: none;
+          color: #000000;
+          font-weight:700;
+        }
+      }
+    }
+
+  }
+}

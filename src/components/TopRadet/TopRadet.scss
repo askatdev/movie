@@ -1,0 +1,48 @@
+#topradet{
+  background: url("../../img/cinema.jpg") no-repeat center/cover;
+  min-height: 40vh;
+  font-family: 'Montserrat', sans-serif;
+  .container{
+    .topradet{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      &--block{
+        transition: .3s;
+        &:hover{
+          box-shadow: 0 0 25px #ffffff;
+          transform: translateY(-15px);
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 230px;
+        border-radius: 10px;
+        height: 30%;
+        background: #183c7a;
+        text-align: left;
+        margin-top: 20px;
+      }
+      img{
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      h5{
+        color: #ffffff;
+        margin: 10px 0;
+        text-align: center;
+        width: 170px;
+      }
+      h4{
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        color:rgb(196, 204, 208);;
+      }
+    }
+  }
+}

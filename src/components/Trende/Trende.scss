@@ -1,0 +1,44 @@
+#trende{
+  font-family: 'Montserrat', sans-serif;
+  padding: 60px 0;
+  background: url("https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg")no-repeat top/cover;
+  min-height: 50vh;
+  h1{
+    margin: 0 0 20px 30px;
+  }
+  .container{
+    width: 100%;
+    .trende {
+      display: flex;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &--blocks {
+        margin: 0 25px;
+        &__block{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          width: 110%;
+          height: 100%;
+          //border: 1px solid #918989;
+          border-radius: 20px;
+          box-shadow: 0 0 25px rgb(8, 34, 80) inset;
+          h5{text-align: center;
+            font-size: 15px;
+            margin: 8px 0;
+          }
+          h3{
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

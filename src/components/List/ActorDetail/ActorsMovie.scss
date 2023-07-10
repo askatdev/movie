@@ -1,0 +1,27 @@
+#actorsMovie{
+  h2{
+    margin-bottom: 20px;
+  }
+  margin-top: 20px;
+  .container{
+    .actorsMovie{
+      display: flex;
+      overflow-x: scroll;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+
+      .block{
+        margin: 0 10px;
+        text-align: center;
+        img{
+          border-radius: 10px;
+        }
+       h2{
+         font-weight: 500;
+         font-size: 20px;
+       }
+      }
+    }
+  }
+}

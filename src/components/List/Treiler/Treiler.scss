@@ -1,0 +1,15 @@
+#treiler{
+  padding: 40px 0;
+  .container{
+    .treiler{
+      display: flex;
+      overflow-x: scroll;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      .block{
+        margin: 0 20px;
+      }
+    }
+  }
+}
