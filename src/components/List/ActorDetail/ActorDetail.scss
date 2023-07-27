@@ -1,31 +1,39 @@
-#actorDetail{
-  .container{
-    .actorDetail{
+#actorDetail {
+  .container {
+    .actorDetail {
       display: flex;
       justify-content: space-between;
       align-items: start;
-      margin-top: 20px;
+
       &--img {
+        margin-top: 20px;
+
         img {
           margin-right: 30px;
           border-radius: 10px;
         }
-        &__icon{
-          a{
+
+        &__icon {
+          a {
             color: black;
             font-size: 25px;
             margin: 0 10px;
           }
         }
       }
-      &--text{
+
+      &--text {
+        margin-top: 20px;
+
         h1 {
           font-size: 35px;
         }
-          h2{
-            margin: 30px 0 10px 0;
-          }
-        p{
+
+        h2 {
+          margin: 30px 0 10px 0;
+        }
+
+        p {
           width: 750px;
           font-weight: 400;
           margin-bottom: 50px;

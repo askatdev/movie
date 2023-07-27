@@ -28,7 +28,6 @@ const Actors = () => {
     function getActors() {
         axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`)
             .then((res) => {
-                console.log(res.data);
                 setActors(res.data.cast);
             })
 

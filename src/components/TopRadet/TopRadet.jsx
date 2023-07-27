@@ -5,20 +5,31 @@ import {API_KEY} from "../../API/API";
 import {Link} from "react-router-dom";
 import {LanguageContext} from "../../Context";
 
+
 const TopRadet = () => {
 const [state, setTopRadet] = useState([])
     const {dark} = useContext(LanguageContext)
+    const {language} = useContext(LanguageContext)
+    const [next,setNext] = useState(1)
+
+
     function getPopular(key){
-        axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US &page=1`)
+        axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=${language}&page=${next}`)
             .then((res)=>{
                 setTopRadet(res.data.results)
             })
     }
     useEffect(()=>{
         getPopular(API_KEY)
-    })
+    },[language,next])
 
+    const handleNext = () =>{
+        setNext(next + 1)
+    }
+    const closeNext = () => {
+        setNext(next -1)
 
+    }
     return (
         <div id="topradet" style={{
             background:dark? "black":"white"
@@ -28,7 +39,9 @@ const [state, setTopRadet] = useState([])
                     {
                         state.map((el)=>(
                            <Link to={`/movie-detail/${el.id}`}>
-                               <div className="topradet--block">
+                               <div className="topradet--block" style={{
+                                boxShadow:dark ? "0 0 10px white":''
+                            }}>
                                    <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${el.poster_path}`} alt="img"/>
                                    <h5>{el.title}</h5>
                                    <h4>{el.release_date}</h4>
@@ -36,9 +49,31 @@ const [state, setTopRadet] = useState([])
                            </Link>
                         ))
                     }
-
                 </div>
+
+                <div className="btn" style={{display:"flex",justifyContent:"space-between",margin:'20px 0'}}>
+                        <button style={{
+                            display:next === 1 ? "none":"block ",
+                            width:'100px',
+                            height:"40px",
+                            fontSize:"20px",
+                            background:'red',
+                            color:"white",
+                            border:"none",
+                            borderRadius:'10px'
+                        }} onClick={closeNext}>Previous</button>
+                        <button  style={{
+                            width:'100px',
+                            height:"40px",
+                            fontSize:"20px",
+                            background:'green',
+                            color:"white",
+                            border:"none",
+                            borderRadius:'10px',
+                        }} onClick={handleNext}>Next</button>
+                    </div>
             </div>
+            
         </div>
     );
 };

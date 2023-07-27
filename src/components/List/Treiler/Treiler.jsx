@@ -10,7 +10,6 @@ const Treiler = ({id}) => {
      function getTreiler(){
         axios(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`)
             .then((res)=>{
-                console.log(res.data.results)
                 setTreiler(res.data.results)
             })
      }
